@@ -1,0 +1,14 @@
+{
+  "modelPackage": "com.strandls.ibp.pojo",
+  "apiPackage": "com.strandls.ibp.controller",
+  "invokerPackage": "com.strandls.ibp",
+  "groupId": "com.strandls.biodiv",
+  "artifactId": "ibp-client",
+  "artifactVersion": "1.0.0-SNAPSHOT",
+  "fullJavaUtil": true,
+  "dateLibrary": "legacy",
+  "library": "jersey1",
+  "developerName": "Abhishek Kumar Rudra",
+  "developerEmail": "abhishek.rudra@strandls.com",
+  "java8": true
+}
