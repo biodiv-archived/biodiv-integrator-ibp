@@ -248,9 +248,9 @@ public class ObservationIbpServiceImpl implements ObservationIbpService {
 	}
 
 	@Override
-	public List<Flag> removeFlag(String observationId) {
+	public List<Flag> removeFlag(String observationId, Flag flag) {
 		try {
-			List<Flag> result = observationService.unFlag(observationId);
+			List<Flag> result = observationService.unFlag(observationId, flag);
 			return result;
 		} catch (Exception e) {
 			logger.error(e.getMessage());

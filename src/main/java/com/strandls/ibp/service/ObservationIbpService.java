@@ -67,7 +67,7 @@ public interface ObservationIbpService {
 
 	public List<Flag> createFlag(String observationId, FlagIbp flagIbp);
 
-	public List<Flag> removeFlag(String observationId);
+	public List<Flag> removeFlag(String observationId, Flag flag);
 
 	public Follow requestFollow(String observationId);
 

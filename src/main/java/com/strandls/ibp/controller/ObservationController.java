@@ -423,7 +423,7 @@ public class ObservationController {
 	}
 
 	@POST
-	@Path(ApiConstants.CREATE + ApiConstants.FLAG + "/{observationId}")
+	@Path(ApiConstants.FLAG + "/{observationId}")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@ValidateUser
@@ -445,7 +445,7 @@ public class ObservationController {
 		}
 	}
 
-	@DELETE
+	@PUT
 	@Path(ApiConstants.UNFLAG + "/{observationId}")
 	@Consumes(MediaType.TEXT_PLAIN)
 	@Produces(MediaType.APPLICATION_JSON)
@@ -456,9 +456,10 @@ public class ObservationController {
 			@ApiResponse(code = 400, message = "Unable to unflag a Observation", response = String.class),
 			@ApiResponse(code = 406, message = "User is not allowed to unflag", response = String.class) })
 
-	public Response unFlag(@Context HttpServletRequest request, @PathParam("observaitonId") String observationId) {
+	public Response unFlag(@Context HttpServletRequest request, @PathParam("observaitonId") String observationId,
+			@ApiParam(name = "flag") Flag flag) {
 		try {
-			List<Flag> result = observationService.removeFlag(observationId);
+			List<Flag> result = observationService.removeFlag(observationId,flag);
 			if (result == null)
 				return Response.status(Status.NOT_ACCEPTABLE).entity("User not allowed to Unflag").build();
 			return Response.status(Status.OK).entity(result).build();
