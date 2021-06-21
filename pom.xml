@@ -13,7 +13,6 @@
 	<url>http://www.example.com</url>
 
 	<properties>
-
 		<!-- Plugins property -->
 		<maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
 		<maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
@@ -29,6 +28,11 @@
 		<srcDir>src/main/webapp</srcDir>
 		<base-path>/ibp/api</base-path>
 		<location>com.strandls.ibp</location>
+
+		<!-- Sonar Cloud -->
+		<sonar.projectKey>strandls_biodiv-integrator-ibp</sonar.projectKey>
+		<sonar.organization>strandls</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 
 	<distributionManagement>
