@@ -9,8 +9,8 @@
 	<artifactId>ibp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>ibp</name>
-	<url>http://www.example.com</url>
+	<name>biodiv-integrator-ibp</name>
+	<url>https://github.com/strandls/biodiv-integrator-ibp</url>
 
 	<properties>
 		<!-- Plugins property -->
